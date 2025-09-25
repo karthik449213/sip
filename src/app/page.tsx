@@ -2,7 +2,8 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Calculator,TrendingUp, Menu, X, Mail, Phone, MapPin, Divide } from 'lucide-react'
+import Image from 'next/image'
+import { Calculator,TrendingUp, Menu, X, Mail, Phone, MapPin } from 'lucide-react'
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -52,11 +53,16 @@ export default function HomePage() {
           <div className="flex justify-between items-center py-4">
             {/* Logo Section - Image Holder */}
             <div className="flex items-center space-x-3">
-              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-lg">
+                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-lg">
                 {/* Logo Banner from public folder */}
-                <img src="/logo.png
-                " alt="Logo" className="h-10 w-auto rounded shadow" />
-              </div>
+                <Image 
+                  src="/logo.png" 
+                  alt="SIP Calculator Pro logo banner showing calculator icon and bold text SIP Calculator Pro on a blue and indigo gradient background, conveying trust and professionalism" 
+                  width={120} 
+                  height={40} 
+                  className="h-10 w-auto rounded shadow" 
+                />
+                </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">SIP Calculator Pro</h1>
                 <p className="text-xs text-gray-600">Investment Planning Made Easy</p>
@@ -276,7 +282,7 @@ export default function HomePage() {
                         <Calculator className="h-8 w-8 text-gray-400" />
                       </div>
                       <p className="text-gray-500 text-lg">
-                        Enter your investment details and click "Calculate SIP" to see your potential returns.
+                        Enter your investment details and click &quot;Calculate SIP&quot; to see your potential returns.
                       </p>
                     </div>
                   )}
