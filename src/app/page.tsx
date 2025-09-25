@@ -54,7 +54,8 @@ export default function HomePage() {
             <div className="flex items-center space-x-3">
               <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-lg">
                 {/* Logo Banner from public folder */}
-                <img src="/logo.png" alt="Logo" className="h-10 w-auto rounded shadow" />
+                <img src="/logo.png
+                " alt="Logo" className="h-10 w-auto rounded shadow" />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">SIP Calculator Pro</h1>
