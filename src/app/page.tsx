@@ -2,7 +2,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Calculator, TrendingUp, Menu, X, Mail, Phone, MapPin } from 'lucide-react'
+import { Calculator,TrendingUp, Menu, X, Mail, Phone, MapPin, Divide } from 'lucide-react'
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -46,29 +46,26 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-      {/* Header Section */}
-      <header className="bg-white shadow-sm border-b border-gray-100">
+      {/* Merged Header & Navbar */}
+      <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            {/* Logo Section - SEO optimized */}
+            {/* Logo Section - Image Holder */}
             <div className="flex items-center space-x-3">
-              <Calculator className="h-7 w-7 text-blue-600 mr-2" />
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-lg">
+                {/* Logo Banner from public folder */}
+                <img src="/logo.png" alt="Logo" className="h-10 w-auto rounded shadow" />
+              </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">SIP Calculator Pro</h1>
                 <p className="text-xs text-gray-600">Investment Planning Made Easy</p>
               </div>
             </div>
 
-            {/* Contact Info - Desktop */}
-            <div className="hidden md:flex items-center space-x-6 text-sm text-gray-600">
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4" />
-                <span>info@sipcalculator.com</span>
-              </div>
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-8">
+              <a href="#home" className="text-blue-600 font-medium border-b-2 border-blue-600 pb-2">Home</a>
+              <a href="#calculator" className="text-gray-700 hover:text-blue-600 transition-colors pb-2">Calculator</a>
             </div>
 
             {/* Mobile Contact Button */}
@@ -82,33 +79,6 @@ export default function HomePage() {
               </button>
             </div>
           </div>
-          {/* Mobile Contact Info */}
-          {isMenuOpen && (
-            <div className="md:hidden flex flex-col space-y-2 pb-2 border-t border-gray-100 mt-2">
-              <div className="flex items-center space-x-2 text-gray-600">
-                <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-600">
-                <Mail className="h-4 w-4" />
-                <span>info@sipcalculator.com</span>
-              </div>
-            </div>
-          )}
-        </div>
-      </header>
-
-      {/* Navigation Bar */}
-      <nav className="bg-white shadow-md sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-blue-600 font-medium border-b-2 border-blue-600 pb-2">Home</a>
-              <a href="#calculator" className="text-gray-700 hover:text-blue-600 transition-colors pb-2">Calculator</a>
-            </div>
-            {/* CTA Button (optional) */}
-          </div>
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="md:hidden border-t border-gray-200 py-4">
@@ -119,7 +89,7 @@ export default function HomePage() {
             </div>
           )}
         </div>
-      </nav>
+      </header>
 
       {/* Hero Section */}
       <section id="home" className="relative py-20 lg:py-32 overflow-hidden">
@@ -428,7 +398,7 @@ export default function HomePage() {
                 <li><a href="/sip-benefits" className="text-gray-300 hover:text-white transition-colors">SIP Benefits</a></li>
                 <li><a href="/mutual-funds" className="text-gray-300 hover:text-white transition-colors">Mutual Funds</a></li>
                 <li><a href="/faq" className="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
-                <li><a href="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
               </ul>
             </div>
           </div>
@@ -436,12 +406,12 @@ export default function HomePage() {
           {/* Footer Bottom */}
           <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 mb-4 md:mb-0">
-              © 2024 SIP Calculator Pro. All rights reserved. {/* INSERT YOUR COPYRIGHT */}
+              © 2025 SIP Calculator . All rights reserved. {/* INSERT YOUR COPYRIGHT */}
             </div>
             <div className="flex space-x-6">
-              <a href="/terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
-              <a href="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="/cookies" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
             </div>
           </div>
         </div>
