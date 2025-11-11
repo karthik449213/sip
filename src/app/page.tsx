@@ -62,11 +62,13 @@ export default function HomePage() {
                   height={40} 
                   className="h-10 w-auto rounded shadow" 
                 />
+                  <a href="https://beta.publishers.adsterra.com/referral/u6egwLiYme" rel="nofollow"><img alt="banner" src="https://landings-cdn.adsterratech.com/referralBanners/gif/720x90_adsterra_reff.gif" /></a>
                 </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">SIP Calculator Pro</h1>
                 <p className="text-xs text-gray-600">Investment Planning Made Easy</p>
               </div>
+              
             </div>
 
             {/* Desktop Navigation */}
