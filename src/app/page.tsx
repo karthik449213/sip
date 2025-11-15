@@ -3,9 +3,11 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Calculator,TrendingUp, Menu, X, Mail, Phone, MapPin } from 'lucide-react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 import GifAd from "@/components/GifAd";
+import VideoAd from "@/components/VideoAd";
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   
@@ -95,6 +97,8 @@ export default function HomePage() {
             <div className="hidden md:flex space-x-8">
               <a href="#home" className="text-blue-600 font-medium border-b-2 border-blue-600 pb-2">Home</a>
               <a href="#calculator" className="text-gray-700 hover:text-blue-600 transition-colors pb-2">Calculator</a>
+              <a href="/profit-margin-calculator" className="text-gray-700 hover:text-blue-600 transition-colors pb-2">Profit Margin</a>
+              <a href="/startup-runway-calculator" className="text-gray-700 hover:text-blue-600 transition-colors pb-2">Startup Runway</a>
             </div>
 
             {/* Mobile Contact Button */}
@@ -114,6 +118,8 @@ export default function HomePage() {
               <div className="flex flex-col space-y-4">
                 <a href="#home" className="text-blue-600 font-medium">Home</a>
                 <a href="#calculator" className="text-gray-700">Calculator</a>
+                <a href="/profit-margin-calculator" className="text-gray-700">Profit Margin</a>
+                <a href="/startup-runway-calculator" className="text-gray-700">Startup Runway</a>
               </div>
             </div>
           )}
@@ -182,7 +188,7 @@ export default function HomePage() {
       <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <a href="https://manychat.partnerlinks.io/c08p8qna3uyj" target="_blank" rel="noopener noreferrer">
+            <a href="https://try.elevenlabs.io/u17m47p67o8u" target="_blank" rel="noopener noreferrer">
               <Image
                 src="/Lin Personal cover 1584x386-16.png" // Replace with your custom banner image
                 alt="Custom Ad Banner 1"
@@ -349,21 +355,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Ad Unit 2: Two GIF Ads after Calculator */}
+      {/* Ad Unit 2: Video Ad and GIF Ads after Calculator */}
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <div className="flex justify-center space-x-4 mb-4">
+              <VideoAd
+                videoSrc="/Video-follow-to-dm-for-you.mp4"
+                link="https://try.elevenlabs.io/u17m47p67o8u"
+                altText="Video Ad: Follow to DM for you"
+                width={300}
+                height="auto"
+              />
+            </div>
             <div className="flex justify-center space-x-4">
               <GifAd
                 gifSrc="/GIF-follow-to-dm-for-them.gif"
-                link="https://manychat.partnerlinks.io/1cs5r40j5vyo-ogcg6e"
+                link="https://try.elevenlabs.io/u17m47p67o8u"
                 altText="Follow to DM for them"
                 width={300}
                 height="auto"
               />
               <GifAd
                 gifSrc="/GIF-follow-to-dm-for-you.gif"
-                link="https://manychat.partnerlinks.io/1cs5r40j5vyo-ogcg6e"
+                link="https://try.elevenlabs.io/u17m47p67o8u"
                 altText="Follow to DM for you"
                 width={300}
                 height="auto"
@@ -431,15 +446,185 @@ export default function HomePage() {
       <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <a href="https://example.com/affiliate3" target="_blank" rel="noopener noreferrer">
+            <a href="https://try.elevenlabs.io/u17m47p67o8u" target="_blank" rel="noopener noreferrer">
               <Image
-                src="/ad-banner3.png" // Replace with your custom banner image
+                src="/RET-AD2-1200X1200PX -  IG Broadcast Channel.png" // Replace with your custom banner image
                 alt="Custom Ad Banner 3"
                 width={728}
                 height={90}
                 className="mx-auto rounded-lg shadow-md"
               />
             </a>
+          </div>
+        </div>
+      </section>
+      {/* Benefits of SIP Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50" id="benefits-sip">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Benefits of SIP (Systematic Investment Plan)
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              A Systematic Investment Plan (SIP) allows you to invest a fixed amount regularly in mutual funds, helping you build long-term wealth with discipline and convenience. Below are some of the major advantages:
+            </p>
+          </div>
+
+          {/* Ad Unit: Banner after intro */}
+          <div className="mb-12">
+            <div className="text-center">
+              <a href="https://manychat.partnerlinks.io/c08p8qna3uyj" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/COLD-AD2-960  x 1200 -  Lead Generation.png"
+                  alt="Custom Ad Banner for SIP Benefits"
+                  width={728}
+                  height={90}
+                  className="mx-auto rounded-lg shadow-md"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <ul className="list-disc pl-6 space-y-3 text-gray-700 mb-12">
+              <li><strong>Rupee Cost Averaging:</strong> You buy more units when prices are low and fewer when prices are high, reducing the overall cost of investment.</li>
+              <li><strong>Power of Compounding:</strong> Long-term SIPs allow your gains to generate additional returns, significantly growing your wealth over time.</li>
+              <li><strong>Low Entry Barrier:</strong> Start your investment journey with as little as ₹500 per month—ideal for beginners.</li>
+              <li><strong>Disciplined Saving Habit:</strong> Automated monthly investments keep you consistent and prevent impulsive financial decisions.</li>
+              <li><strong>Flexible & Convenient:</strong> You can increase, pause, or stop SIPs anytime based on your financial goals.</li>
+              <li><strong>Better Risk Management:</strong> SIPs reduce the impact of market volatility since investments are spread over time.</li>
+            </ul>
+
+            {/* Ad Unit: Two GIF Ads after benefits list */}
+            <div className="mb-12">
+              <div className="text-center">
+                <div className="flex justify-center space-x-4">
+                  <GifAd
+                    gifSrc="/GIF-follow-to-dm-for-them.gif"
+                    link="https://manychat.partnerlinks.io/1cs5r40j5vyo-ogcg6e"
+                    altText="Follow to DM for them"
+                    width={300}
+                    height="auto"
+                  />
+                  <GifAd
+                    gifSrc="/GIF-follow-to-dm-for-you.gif"
+                    link="https://manychat.partnerlinks.io/1cs5r40j5vyo-ogcg6e"
+                    altText="Follow to DM for you"
+                    width={300}
+                    height="auto"
+                  />
+                </div>
+                <p className="mt-2 text-sm text-gray-600">Sponsored: Best Investment Tools</p>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-semibold text-gray-800 mt-10 mb-4">
+              SIP Tips & Smart Investment Tricks
+            </h3>
+
+            <ul className="list-disc pl-6 space-y-3 text-gray-700 mb-12">
+              <li><strong>Start Early:</strong> Even small SIPs started early can beat larger late investments due to compounding.</li>
+              <li><strong>Increase SIP Annually:</strong> Use a Step-Up SIP to boost your contributions as your income grows.</li>
+              <li><strong>Link SIPs to Goals:</strong> Retirement, education, emergency fund—assign a purpose to each SIP.</li>
+              <li><strong>Avoid Frequent Stopping:</strong> Market dips are the best time to continue your SIP, not stop it.</li>
+              <li><strong>Review Funds Twice a Year:</strong> Track performance but avoid unnecessary switching.</li>
+              <li><strong>Diversify Wisely:</strong> Combine equity, debt, and hybrid SIPs based on your risk appetite.</li>
+            </ul>
+
+            <div className="bg-white mt-10 p-6 rounded-lg shadow-sm border">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">Pro Tip</h4>
+              <p className="text-gray-700">
+                Combine SIPs with an emergency fund and term insurance for a complete financial safety net.
+              </p>
+            </div>
+          </div>
+        </div>
+  </section>
+
+      {/* Business & Startup Calculators Section */}
+      <section className="py-16 px-4 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Business & Startup Calculators
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Make smarter business decisions with our free financial calculators. From profit margins to break-even analysis, get instant insights to grow your startup or optimize your business operations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border border-slate-200">
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                Profit Margin Calculator
+              </h3>
+              <p className="text-slate-600 mb-4 leading-relaxed">
+                Calculate your gross and net profit margins to understand your business profitability. Essential for pricing strategy and financial planning.
+              </p>
+              <a href="/profit-margin-calculator" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 inline-block text-center">
+                Calculate Now
+              </a>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border border-slate-200">
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                GST Calculator
+              </h3>
+              <p className="text-slate-600 mb-4 leading-relaxed">
+                Quickly calculate GST on your products and services. Add or remove GST from any amount with support for multiple tax rates.
+              </p>
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+                Calculate Now
+              </button>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border border-slate-200">
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                ROI Calculator
+              </h3>
+              <p className="text-slate-600 mb-4 leading-relaxed">
+                Measure the return on your investments and marketing campaigns. Compare different investment options and make data-driven decisions.
+              </p>
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+                Calculate Now
+              </button>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border border-slate-200">
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                Break-Even Calculator
+              </h3>
+              <p className="text-slate-600 mb-4 leading-relaxed">
+                Determine how many units you need to sell to cover your costs. Perfect for pricing decisions and financial forecasting for startups.
+              </p>
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+                Calculate Now
+              </button>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border border-slate-200">
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                Freelancer Rate Calculator
+              </h3>
+              <p className="text-slate-600 mb-4 leading-relaxed">
+                Calculate your ideal hourly or project rate based on your desired income, expenses, and billable hours. Price your services confidently.
+              </p>
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+                Calculate Now
+              </button>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border border-slate-200">
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                Startup Runway Calculator
+              </h3>
+              <p className="text-slate-600 mb-4 leading-relaxed">
+                Calculate how long your startup can operate with current funding. Plan your burn rate and know when you need to raise more capital.
+              </p>
+              <Link href="/startup-runway-calculator" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 inline-block text-center">
+                Calculate Now
+              </Link>
+            </div>
           </div>
         </div>
       </section>
