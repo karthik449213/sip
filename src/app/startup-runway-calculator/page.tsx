@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { Calculator, TrendingUp, Menu, X, Mail, Phone, MapPin, ArrowLeft, Clock, DollarSign } from 'lucide-react'
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts'
+import { Calculator, Menu, X, Mail, Phone, MapPin, ArrowLeft, Clock, DollarSign } from 'lucide-react'
+import {  XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts'
 import Link from 'next/link'
 import GifAd from "@/components/GifAd";
 
@@ -304,7 +304,7 @@ export default function StartupRunwayCalculatorPage() {
                         <DollarSign className="h-8 w-8 text-gray-400" />
                       </div>
                       <p className="text-gray-500 text-lg">
-                        Enter your financial details and click "Calculate Runway" to see your startup's runway analysis.
+                        Enter your financial details and click Calculate Runway to see your startups runway analysis.
                       </p>
                     </div>
                   )}
