@@ -4,7 +4,8 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { Calculator,TrendingUp, Menu, X, Mail, Phone, MapPin } from 'lucide-react'
-
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
+import GifAd from "@/components/GifAd";
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   
@@ -45,6 +46,25 @@ export default function HomePage() {
     setResult(null)
   }
 
+  // Prepare chart data
+  const chartData = result ? [
+    {
+      name: 'Total Investment',
+      amount: result.totalInvestment,
+      color: '#3b82f6'
+    },
+    {
+      name: 'Total Gains',
+      amount: result.totalGains,
+      color: '#8b5cf6'
+    },
+    {
+      name: 'Maturity Amount',
+      amount: result.maturityAmount,
+      color: '#10b981'
+    }
+  ] : []
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       {/* Merged Header & Navbar */}
@@ -62,7 +82,7 @@ export default function HomePage() {
                   height={40} 
                   className="h-10 w-auto rounded shadow" 
                 />
-                  <a href="https://beta.publishers.adsterra.com/referral/u6egwLiYme" rel="nofollow"><img alt="banner" src="https://landings-cdn.adsterratech.com/referralBanners/gif/720x90_adsterra_reff.gif" /></a>
+                 
                 </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">SIP Calculator Pro</h1>
@@ -148,10 +168,29 @@ export default function HomePage() {
               >
                 Start Calculating Now
               </button>
-              <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
+              <button 
+               onClick={() => document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' })}
+              className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
                 Learn More {/* INSERT LEARN MORE LINK */}
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ad Unit 1: Custom Banner after Hero */}
+      <section className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <a href="https://manychat.partnerlinks.io/c08p8qna3uyj" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/Lin Personal cover 1584x386-16.png" // Replace with your custom banner image
+                alt="Custom Ad Banner 1"
+                width={728}
+                height={90}
+                className="mx-auto rounded-lg shadow-md"
+              />
+            </a>
           </div>
         </div>
       </section>
@@ -277,6 +316,21 @@ export default function HomePage() {
                           {((result.totalGains / result.totalInvestment) * 100).toFixed(1)}%
                         </div>
                       </div>
+
+                      {/* Bar Chart */}
+                      <div className="mt-8">
+                        <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">Investment Breakdown</h4>
+                        <ResponsiveContainer width="100%" height={300}>
+                          <BarChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="name" />
+                            <YAxis />
+                            <Tooltip formatter={(value) => [`₹${value.toLocaleString('en-IN')}`, 'Amount']} />
+                            <Legend />
+                            <Bar dataKey="amount" fill="#3b82f6" />
+                          </BarChart>
+                        </ResponsiveContainer>
+                      </div>
                     </div>
                   ) : (
                     <div className="text-center py-12">
@@ -295,8 +349,33 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Ad Unit 2: Two GIF Ads after Calculator */}
+      <section className="py-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="flex justify-center space-x-4">
+              <GifAd
+                gifSrc="/GIF-follow-to-dm-for-them.gif"
+                link="https://manychat.partnerlinks.io/1cs5r40j5vyo-ogcg6e"
+                altText="Follow to DM for them"
+                width={300}
+                height="auto"
+              />
+              <GifAd
+                gifSrc="/GIF-follow-to-dm-for-you.gif"
+                link="https://manychat.partnerlinks.io/1cs5r40j5vyo-ogcg6e"
+                altText="Follow to DM for you"
+                width={300}
+                height="auto"
+              />
+            </div>
+            <p className="mt-2 text-sm text-gray-600">Sponsored: Best Investment Tools</p>
+          </div>
+        </div>
+      </section>
+
       {/* Features/Benefits Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" id="benefits">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -344,6 +423,23 @@ export default function HomePage() {
                 Responsive design that works perfectly on all devices. Calculate your SIP returns anywhere, anytime from your smartphone or tablet.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ad Unit 3: Custom Banner before Footer */}
+      <section className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <a href="https://example.com/affiliate3" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/ad-banner3.png" // Replace with your custom banner image
+                alt="Custom Ad Banner 3"
+                width={728}
+                height={90}
+                className="mx-auto rounded-lg shadow-md"
+              />
+            </a>
           </div>
         </div>
       </section>
