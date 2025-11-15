@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Calculator, TrendingUp, Menu, X, Mail, Phone, MapPin, ArrowLeft } from 'lucide-react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
 import Link from 'next/link'
-import GifAd from '../../components/GifAd'
+
 
 export default function ProfitMarginCalculatorPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -329,7 +329,7 @@ export default function ProfitMarginCalculatorPage() {
                           <Calculator className="h-8 w-8 text-gray-400" />
                         </div>
                         <p className="text-gray-500 text-lg">
-                          Enter your business details and click "Calculate Margin" to see your profit analysis.
+                          Enter your business details and click Calculate Margin to see your profit analysis.
                         </p>
                       </div>
                     )}
