@@ -189,7 +189,7 @@ export default function HomePage() {
                       value={monthlyAmount}
                       onChange={(e) => setMonthlyAmount(e.target.value)}
                       placeholder="Enter monthly SIP amount"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-black"
                     />
                   </div>
 
@@ -203,7 +203,7 @@ export default function HomePage() {
                       value={tenure}
                       onChange={(e) => setTenure(e.target.value)}
                       placeholder="Enter investment period in years"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-black"
                     />
                   </div>
 
@@ -218,7 +218,7 @@ export default function HomePage() {
                       value={expectedReturn}
                       onChange={(e) => setExpectedReturn(e.target.value)}
                       placeholder="Enter expected annual return rate"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-black"
                     />
                   </div>
 
